@@ -25,16 +25,20 @@ $(call inherit-product, device/oneplus/instantnoodle/device.mk)
 # Inherit some common lineage stuff.
 $(call inherit-product, vendor/derp/config/common_full_phone.mk)
 
-# Xtras
-DERP_BUILDTYPE := Official
-EXTRA_UDFPS_ANIMATIONS := true
-TARGET_BOOT_ANIMATION_RES := 1080
+# Inherit some common xdroidsp stuff
+$(call inherit-product, vendor/xdroid/config/common.mk)
+$(call inherit-product, vendor/google/gms/config.mk)
+XDROID_BOOT := 1080
+XDROID_MAINTAINER := Saurabh Parab
+TARGET_SUPPORTS_GOOGLE_RECORDER := false
+TARGET_INCLUDE_STOCK_ARCORE := false
+TARGET_INCLUDE_LIVE_WALLPAPERS := false
 TARGET_SUPPORTS_QUICK_TAP := true
 
 # Blur
 TARGET_USES_BLUR := true
 
-PRODUCT_NAME := derp_instantnoodle
+PRODUCT_NAME := xdroid_instantnoodle
 PRODUCT_DEVICE := instantnoodle
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_BRAND := OnePlus
