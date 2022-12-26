@@ -12,17 +12,18 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from instantnoodle device
 $(call inherit-product, device/oneplus/instantnoodle/device.mk)
 
-# Inherit some common Evolution X stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common derpfest stuff.
+$(call inherit-product, vendor/derp/config/common_full_phone.mk)
 
-# Blur properties
-TARGET_ENABLE_BLUR := true
+# Official
+DERP_BUILDTYPE := Official
 
 # Extras
-TARGET_HAS_UDFPS := true
+EXTRA_UDFPS_ANIMATIONS := true
+TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_SUPPORTS_QUICK_TAP := true
 
-PRODUCT_NAME := lineage_instantnoodle
+PRODUCT_NAME := derp_instantnoodle
 PRODUCT_DEVICE := instantnoodle
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_BRAND := OnePlus
