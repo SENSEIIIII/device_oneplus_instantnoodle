@@ -31,6 +31,10 @@ PRODUCT_PACKAGES += \
     OPlusSettingsProviderResTarget \
     OPlusSystemUIResTarget
 
+# Sensors
+PRODUCT_PACKAGES += \
+    als_correction_service.oplus
+
 # Shipping API
 PRODUCT_SHIPPING_API_LEVEL := 29
 
